@@ -136,15 +136,23 @@ ul,ol{padding:0;margin:0;list-style:none}
 .mini-card p{font-size:.95rem;margin:0}
 
 /* Credentials */
-.cred-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
-.cred-tile{aspect-ratio:4/3;border-radius:var(--radius);overflow:hidden;background:var(--white);box-shadow:var(--shadow-sm);position:relative}
-.cred-tile.placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;text-align:center;padding:1rem;border:3px dashed #E5CF92;background:repeating-linear-gradient(45deg,#FFFDF6,#FFFDF6 12px,#FFF8E4 12px,#FFF8E4 24px);box-shadow:none;color:#8A6A12;font-weight:800}
+.cred-badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.7rem;margin:-1rem auto 2.4rem;max-width:960px}
+.cred-badges li{display:inline-flex;align-items:center;gap:.5rem;padding:.5rem 1rem .5rem .6rem;border-radius:999px;background:var(--white);border:2px solid #F3E3B5;font-weight:800;font-size:.95rem;color:var(--ink);box-shadow:var(--shadow-sm)}
+.cred-badges svg{width:26px;height:26px;flex:none;color:var(--green)}
+.cred-badges li:first-child{border-color:var(--sun);background:#FFF6DA}
+.cred-badges li:first-child svg{color:#B9800A}
+.cred-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.6rem;max-width:980px;margin-inline:auto}
+.cred-tile{border-radius:var(--radius);overflow:hidden;background:var(--white);box-shadow:var(--shadow-sm);border:2px solid #F3E3B5;display:flex;flex-direction:column}
+.cred-tile.placeholder{aspect-ratio:4/3;align-items:center;justify-content:center;gap:.6rem;text-align:center;padding:1rem;border:3px dashed #E5CF92;background:repeating-linear-gradient(45deg,#FFFDF6,#FFFDF6 12px,#FFF8E4 12px,#FFF8E4 24px);box-shadow:none;color:#8A6A12;font-weight:800}
 .cred-tile.placeholder svg{width:48px;height:48px;color:#C99A1E}
-.cred-tile button{all:unset;cursor:zoom-in;display:block;width:100%;height:100%}
+.cred-tile button{all:unset;cursor:zoom-in;display:block;width:100%;aspect-ratio:4/3;overflow:hidden;background:#EEE}
+.cred-tile>img{width:100%;aspect-ratio:4/3;object-fit:cover}
 .cred-tile button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
 .cred-tile img{width:100%;height:100%;object-fit:cover;transition:transform .3s}
 .cred-tile button:hover img{transform:scale(1.04)}
-.cred-tile .cap{position:absolute;left:0;right:0;bottom:0;padding:.6rem .9rem;background:linear-gradient(transparent,rgba(43,58,85,.85));color:#fff;font-weight:700;font-size:.95rem}
+.cred-tile .cap{display:block;padding:.85rem 1.1rem 1rem;line-height:1.3}
+.cred-tile .cap strong{display:block;font-family:var(--head);font-weight:600;font-size:1.08rem}
+.cred-tile .cap small{display:block;color:var(--muted);font-weight:700;font-size:.9rem;margin-top:.2rem}
 
 /* Feature cards: meals & transport */
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;align-items:stretch}
@@ -285,7 +293,6 @@ fieldset.shift-pick legend{padding:0;margin-bottom:.4rem;width:100%}
   .art-logo{width:120px;height:120px;margin-bottom:.9rem}
   .facts{grid-template-columns:1fr 1fr}
   .fact+.fact{border-left:0}
-  .cred-grid{grid-template-columns:repeat(2,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
   .footer-grid>div:first-child{grid-column:1/-1}
 }
@@ -305,7 +312,9 @@ fieldset.shift-pick legend{padding:0;margin-bottom:.4rem;width:100%}
   .fact span{font-size:.85rem}
   .about-cards{grid-template-columns:1fr 1fr;gap:.7rem}
   .mini-card{padding:1rem}
-  .cred-grid{gap:.8rem}
+  .cred-grid{grid-template-columns:1fr;gap:1.1rem}
+  .cred-badges{margin:-1.2rem auto 1.8rem;gap:.5rem}
+  .cred-badges li{font-size:.86rem}
   .cred-tile.placeholder{font-size:.85rem}
   .cred-tile.placeholder svg{width:36px;height:36px}
   .feature-card{padding:1.4rem}

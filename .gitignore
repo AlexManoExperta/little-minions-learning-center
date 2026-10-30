@@ -1,2 +1,8 @@
 previews/
 .htmlvalidate.json
+
+# Unblurred originals: keep local only (show private license/cert numbers)
+assets/credentials/red-cross-cpr-first-aid.jpg
+assets/credentials/city-business-license.jpg
+assets/credentials/ececd-operators-license-5-star.jpg
+assets/credentials/nm-child-development-certificate.jpg

@@ -7,10 +7,15 @@
       { src: "assets/credentials/nm-child-care-license.jpg", title: "New Mexico Child Care License", alt: "Photo of the New Mexico child care license" },
    Empty slots show a "coming soon" tile (at least PLACEHOLDER_SLOTS tiles are shown).
    ===================================================================== */
+// The "-blurred" files hide license/certificate numbers and the Red Cross QR code.
+// The unblurred originals are kept locally only (listed in .gitignore).
 const CREDENTIALS = [
-  // { src: "assets/credentials/example.jpg", title: "Certificate name", alt: "Describe the photo" },
+  { src: "assets/credentials/ececd-operators-license-5-star-blurred.jpg", title: "Child Care Operator's License — STARS 5-Star", issuer: "NM Early Childhood Education & Care Department", alt: "New Mexico ECECD Operator's License with STARS 5-Star rating" },
+  { src: "assets/credentials/city-business-license-blurred.jpg", title: "Business License — Family Home Day Care", issuer: "City of Albuquerque", alt: "City of Albuquerque Business License Certificate for Little Minions Learning Center" },
+  { src: "assets/credentials/nm-child-development-certificate-blurred.jpg", title: "Child Development Certificate — Infant/Toddler", issuer: "State of New Mexico", alt: "New Mexico Child Development Certificate, Infant/Toddler" },
+  { src: "assets/credentials/red-cross-cpr-first-aid-blurred.jpg", title: "Adult & Pediatric First Aid / CPR / AED", issuer: "American Red Cross", alt: "American Red Cross Adult and Pediatric First Aid/CPR/AED certificate" },
 ];
-const PLACEHOLDER_SLOTS = 6;
+const PLACEHOLDER_SLOTS = 0; // "coming soon" tiles shown until this many tiles exist
 
 /* Where enrollment inquiries go (used by the mailto form) */
 const OWNER_EMAIL = "cerives1@gmail.com";
@@ -41,7 +46,8 @@ const OWNER_EMAIL = "cerives1@gmail.com";
   const tiles = CREDENTIALS.map((c, i) =>
     `<li class="cred-tile"><button type="button" data-index="${i}" aria-label="View larger: ${esc(c.title || "credential photo")}">` +
     `<img src="${esc(c.src)}" alt="${esc(c.alt || c.title || "License or certificate photo")}" loading="lazy">` +
-    (c.title ? `<span class="cap">${esc(c.title)}</span>` : "") + `</button></li>`
+    `</button>` +
+    (c.title ? `<span class="cap"><strong>${esc(c.title)}</strong>${c.issuer ? `<small>${esc(c.issuer)}</small>` : ""}</span>` : "") + `</li>`
   );
   for (let i = CREDENTIALS.length; i < PLACEHOLDER_SLOTS; i++) {
     tiles.push('<li class="cred-tile placeholder"><svg aria-hidden="true"><use href="#i-doc"/></svg><span>License / certificate photo coming soon</span></li>');
@@ -59,7 +65,7 @@ const OWNER_EMAIL = "cerives1@gmail.com";
     lastFocus = document.activeElement;
     lbImg.src = c.src;
     lbImg.alt = c.alt || c.title || "License or certificate photo";
-    lbCap.textContent = c.title || "";
+    lbCap.textContent = [c.title, c.issuer].filter(Boolean).join(" · ");
     lb.hidden = false;
     document.body.style.overflow = "hidden";
     lbClose.focus();

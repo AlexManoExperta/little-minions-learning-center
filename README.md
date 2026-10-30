@@ -1,7 +1,7 @@
 # Little Minions Learning Center — website
 
 A static website (plain HTML + CSS + a small vanilla JS file, no build step) for
-Little Minions Learning Center, 10631 Roundstone Road, Albuquerque, NM 87121.
+Little Minions Learning Center, 10631 Groundstone Rd SW, Albuquerque, NM 87121.
 Phone 505-369-8606 · cerives1@gmail.com
 
 ```
@@ -36,7 +36,11 @@ const CREDENTIALS = [
 ];
 ```
 
-Each photo replaces a "coming soon" tile; clicking it opens a full-size lightbox.
+Clicking a photo opens a full-size lightbox. `PLACEHOLDER_SLOTS` (in the same file) adds
+"coming soon" tiles if you want empty slots.
+
+The site uses `*-blurred.jpg` copies that hide license/certificate numbers and the Red Cross QR code.
+The unblurred originals stay local only — they are listed in `.gitignore` and must not be published.
 
 ## The enrollment form
 
@@ -63,7 +67,6 @@ Netlify Forms, Basin, or Getform work the same way: point `action` at their URL 
 
 - Meal times (the daily meal schedule shows Morning / Midday / Afternoon / Evening — no exact times).
 - Days of the week she is open (not stated on the site or in the structured data).
-- Credential photos (6 placeholder tiles are waiting).
 - Whether "text" is OK in addition to calling 505-369-8606 (site currently says "Call").
 - Form service (see above).
 
