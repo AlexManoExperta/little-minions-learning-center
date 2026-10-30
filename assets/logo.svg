@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-labelledby="t">
+  <title id="t">Little Minions Learning Center logo</title>
+  <circle cx="60" cy="60" r="58" fill="#FFF8E7"/>
+  <g stroke="#F6B92B" stroke-width="6" stroke-linecap="round">
+    <line x1="60" y1="10" x2="60" y2="20"/><line x1="25" y1="25" x2="32" y2="32"/>
+    <line x1="95" y1="25" x2="88" y2="32"/><line x1="10" y1="55" x2="20" y2="55"/>
+    <line x1="110" y1="55" x2="100" y2="55"/>
+  </g>
+  <circle cx="60" cy="55" r="24" fill="#FFD166" stroke="#F6B92B" stroke-width="3"/>
+  <circle cx="52" cy="52" r="2.8" fill="#2B3A55"/><circle cx="68" cy="52" r="2.8" fill="#2B3A55"/>
+  <path d="M51 61 Q60 69 69 61" fill="none" stroke="#2B3A55" stroke-width="3" stroke-linecap="round"/>
+  <rect x="22" y="76" width="26" height="26" rx="5" fill="#6EC6E8"/>
+  <rect x="47" y="76" width="26" height="26" rx="5" fill="#7BC8A4"/>
+  <rect x="72" y="76" width="26" height="26" rx="5" fill="#FF8C69"/>
+  <text x="35" y="96" font-family="Fredoka, Arial Rounded MT Bold, sans-serif" font-weight="700" font-size="18" fill="#fff" text-anchor="middle">L</text>
+  <text x="60" y="96" font-family="Fredoka, Arial Rounded MT Bold, sans-serif" font-weight="700" font-size="18" fill="#fff" text-anchor="middle">M</text>
+  <text x="85" y="96" font-family="Fredoka, Arial Rounded MT Bold, sans-serif" font-weight="700" font-size="18" fill="#fff" text-anchor="middle">L</text>
+</svg>
